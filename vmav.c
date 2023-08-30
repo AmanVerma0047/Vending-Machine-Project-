@@ -3,14 +3,33 @@
             Made By: Aman Verma
             course: BCA 1st Semester
 */
+//declaration of variables here
+int choice;
+int amt_to_pay;
+
+// function
+void fun(char food[],int price){
+printf("\nYou Picked %s for %dRS!",food,price);
+printf("\nEnter amount to pay:");
+scanf("%d",&amt_to_pay);
+if (amt_to_pay>price)
+    {
+    printf("Here Your leftover amount:%d\n",amt_to_pay-price);
+    }
+else if(amt_to_pay ==price)
+    {
+    printf("Thanks for purchase!\n");
+    }
+else if(amt_to_pay<price)
+    {
+    printf("Your payment not successful! Please Try again!\n");
+    }
+}
+
 
 
 void main()
 {
-	//declaration of variables here
-	int choice;
-	int amt_to_pay;
-	//declaration ends here
 	//menu
 	printf("--------Vending Machine Project--------\n");
 	printf("1.)Samosa\t-5rs\t6.)Chola\t-35rs\n");
@@ -25,164 +44,36 @@ void main()
 
 while (choice!=10)
 {
-
-
-
     //swicth starts
 	switch(choice)
 	{
 	case 1:
-	    printf("\nYou Picked SAMOSA for 5RS!");
-        printf("\nEnter amount to pay:");
-        scanf("%d",&amt_to_pay);
-        if (amt_to_pay>5)
-            {
-            printf("Here Your leftover amount:%d\n",amt_to_pay-5);
-            }
-	  else if(amt_to_pay ==5)
-            {
-            printf("Thanks for purchase!\n");
-            }
-      else if(amt_to_pay<5)
-            {
-            printf("Your payment not successful! Please Try again!\n");
-            }
+        fun("Samosa",5);
         break;
+
     case 2:
-        printf("\nYou Picked BIRYANI for 40RS");
-        printf("\nEnter amount to pay:");
-        scanf("%d",&amt_to_pay);
-        if (amt_to_pay>40)
-            {
-            printf("Here Your leftover amount:%d\n",amt_to_pay-40);
-            }
-        else if(amt_to_pay==40)
-            {
-            printf("Thanks For Purchase!\n");
-            }
-        else if(amt_to_pay<40)
-            {
-            printf("Your payment not successful! Please Try again!\n");
-            }
+        fun("Biryani",40);
         break;
     case 3:
-        printf("\nYou Picked CHILIFRIES for 15RS");
-        printf("\nEnter amount to pay:");
-        scanf("%d",&amt_to_pay);
-        if (amt_to_pay>15)
-            {
-            printf("Here Your leftover amount:%d\n",amt_to_pay-15);
-            }
-        else if(amt_to_pay==15)
-            {
-            printf("Thanks For Purchase!\n");
-            }
-        else if(amt_to_pay<15)
-            {
-            printf("Your payment not successful! Please Try again!\n");
-            }
+        fun("Chilifries",15);
         break;
     case 4:
-        printf("\nYou Picked CHAI for 7RS");
-        printf("\nEnter amount to pay:");
-        scanf("%d",&amt_to_pay);
-        if (amt_to_pay>7)
-            {
-            printf("Here Your leftover amount:%d\n",amt_to_pay-7);
-            }
-        else if(amt_to_pay==7)
-            {
-            printf("Thanks For Purchase!\n");
-            }
-        else if(amt_to_pay<7)
-            {
-            printf("Your payment not successful! Please Try again!\n");
-            }
+        fun("Chai",7);
         break;
     case 5:
-        printf("\nYou Picked PIZZA for 100RS");
-        printf("\nEnter amount to pay:");
-        scanf("%d",&amt_to_pay);
-        if (amt_to_pay>100)
-            {
-            printf("Here Your leftover amount:%d\n",amt_to_pay-100);
-            }
-        else if(amt_to_pay==100)
-            {
-            printf("Thanks For Purchase!\n");
-            }
-        else if(amt_to_pay<100)
-            {
-            printf("Your payment not successful! Please Try again!\n");
-            }
+        fun("Pizza",100);
         break;
     case 6:
-        printf("\nYou Picked CHOLA for 35RS");
-        printf("\nEnter amount to pay:");
-        scanf("%d",&amt_to_pay);
-        if (amt_to_pay>35)
-            {
-            printf("Here Your leftover amount:%d\n",amt_to_pay-35);
-            }
-        else if(amt_to_pay==35)
-            {
-            printf("Thanks For Purchase!\n");
-            }
-        else if(amt_to_pay<35)
-            {
-            printf("Your payment not successful! Please Try again!\n");
-            }
+        fun("Chola",35);
         break;
     case 7:
-        printf("\nYou Picked DAL CHAWAL for 20RS");
-        printf("\nEnter amount to pay:");
-        scanf("%d",&amt_to_pay);
-        if (amt_to_pay>20)
-            {
-            printf("Here Your leftover amount:%d\n",amt_to_pay-20);
-            }
-        else if(amt_to_pay==20)
-            {
-            printf("Thanks For Purchase!\n");
-            }
-        else if(amt_to_pay<20)
-            {
-            printf("Your payment not successful! Please Try again!\n");
-            }
+        fun("Dal Chawal",20);
         break;
     case 8:
-        printf("\nYou Picked RAJMA for 15RS");
-        printf("\nEnter amount to pay:");
-        scanf("%d",&amt_to_pay);
-        if (amt_to_pay>15)
-            {
-            printf("Here Your leftover amount:%d\n",amt_to_pay-15);
-            }
-        else if(amt_to_pay==15)
-            {
-            printf("Thanks For Purchase!\n");
-            }
-        else if(amt_to_pay<15)
-            {
-            printf("Your payment not successful! Please Try again!\n");
-            }
+        fun("Rajma",15);
         break;
     case 9:
-        printf("\nYou Picked SPANISH TORTILLAS for 1000RS");
-        printf("\nEnter amount to pay:");
-        scanf("%d",&amt_to_pay);
-        if (amt_to_pay>1000)
-            {
-            printf("Here Your leftover amount:%d\n",amt_to_pay-1000);
-            }
-        else if(amt_to_pay==1000)
-            {
-            printf("Thanks For Purchase!\n");
-            }
-        else if(amt_to_pay<1000)
-            {
-            printf("Your payment not successful! Please Try again!\n");
-            }
+        fun("Spanish Tortilla",1000);
         break;
     case 10:
         choice = 10;
